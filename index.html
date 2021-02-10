@@ -4,53 +4,31 @@
 	  <meta charset="utf-8"/>
 	  <title>TP noté </title>
 	  
-	  
-	  <style>
-	  h2 {
-	  color :blue; 
-	  }
-	  h3{
-	  color:gray;}
-	  #Lyon{
-	  background-color:pink;}
-	  #Grenoble
-	  {background-color:pink;}
-	  #Paris{
-	  background-color:pink;}
-	  p{
-	  color:purple;}
-	  .Ville {
-	  display: flex;
-	  flex-warp:nowrap;
-	  }
-	  .Ville div {
-	  width: 8000px;
-	  border: solid 1px #000;
-	  margin: 20px;
-	  }
-	  </style>
-	  </head>
-	  
-	  <script> 
+	 </head>
+	 <script> 
 	  function showCity(){
 				//console.log(villeCourante);
 				//let villeCourante = "LYON";
-				let NomVilleSelectionne= document.getElementsByID("ville-select").value;
+				let NomVilleSelectionne= document.getElementsByID("villeselect").value;
 				let cities = document.getElementsByClassName("city");
 				let l=cities.length;
 				for (let i=0; i<l; i++) {
-               if (cities[i].id == ville-select) {
-               ELEMENT.style.display= "none";} 
-			   else {
-      ELEMENT.style.display= "";
-			}
-			}
-			}
+               cities[i].style.display= "none"
+       if(cities[i].id==nomVilleSelectionnee){
+       cities[i].style.display= "block";
+      }
+     else{
+     cities[i].style.display= " ";
+    }
+    }
+    }
 	  </script>
-	<body>
+	 
+	 
+	 <body>
 	<h1> <center> <strong> TP Météo HTML </strong> </center> </h1>
 	<label for="ville-select"> Choose city:</label>
-	<select onchange=showCity() name="Ville" id="ville-select">
+	<select onchange=showCity() name="Ville" id="villeselect">
 	  <option value=""> Please choose a city </option>
 	  <option value="Lyon">Lyon</option>
 	  <option value="Grenoble">Grenoble</option>
