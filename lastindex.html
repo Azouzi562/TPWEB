@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tp html</title>
+	<link rel="Stylesheet" type="text/css" href="meteo.css">
+	  <script type="text/javascript"src=meteo.js"> </script>
+	
+	
+		</style>
+
+</head>
+
+<body onload="showcity()">
+	 <h1><center>TP METEO HTML </center></h1>
+	 <label for="ville-select"><strong>choisir une ville S'il vous plait</strong></label>
+<select  name="ville" id="titi" onchange=showcity()>
+<option id="">---svp choisir une option---</option>
+<option id="LYON">LYON</option>
+<option id="Grenoble">Grenoble</option>
+<option id="PARIS">PARIS</option>
+</select>
+
+	<div class="METEO">
+
+    <div id ="LYON" class="city">
+    <h2 id="heg">LYON</h2>
+    <p> 5°, pluvieux</p>
+	<img src="noun_pluie.png" alt="photo meteo"  width="100">
+    </div>
+	
+    <div id="Grenoble" class="city">
+	<h2 id ="heg">Grenoble</h2>
+    <p> -1°, ensoleille</p>
+	<img src="noun_sun cloud.png" alt ="meteo"  width="100">
+    </div>
+	
+    <div id="PARIS" class="city">
+    <h2 id ="heg">PARIS</h2>
+    <p> 7°, nuageux</p>
+	<img src="noun_cloud.png" alt="photo meteo" width="100">
+	</div>
+	
+	</div>
+
+<footer>
+    <p id = "AUTEUR">Réalisé par:<strong>Heger AZOUZI/ Mustapha MOUHOUBI </strong> <br>Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.  </p>
+    </footer>
+
+</body>
+</html>

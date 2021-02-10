@@ -1,0 +1,75 @@
+<style>
+	
+	h1{
+	font-style:  italic;
+	background-color: blue;
+	color: white;
+	margin: 15px;
+	width: 95%;
+	transition: 1s;
+}
+	 
+        h2 {
+            color: blue;
+            font-size: 20px;
+        }  
+        
+        #heg{
+        	color: blue;
+            
+        }
+		#heg{
+			color: blue;
+            
+        }
+
+		#heg{
+            
+            color: blue;
+            font-weight:  bolder;
+        }
+        
+        p {
+            color: rgb(0, 0, 0);
+            font-weight:  bold;
+        }
+
+		#AUTEUR {
+			padding: 20px;
+			font-size: 10px;
+            font-weight:  10;
+            background-color: gray; 
+			color: #000;
+			margin: 5%;
+			height: 33px;
+			width: 85%;
+			transition: 1s;
+        }
+
+		.METEO{
+            display: flex;
+			flex-warp: warp;
+			margin: 5px;
+			width: 100%;
+			transition: 1s;
+			flex-direction: row;
+			box-sizing: border-box;
+		    height: 25%;
+        }
+
+		.METEO div {
+			width: 90000px;
+			color: white;
+            border: solid 1px #000 ;
+            background-color: rgb(145,145,145);
+            margin: 40px;
+
+        }
+		</style>
+	 
+	 
+	 
+	 
+	 
+	  <link rel="Stylesheet" type="text/css" href="meteo.css">
+	  <script type="text/javascript"src=meteo.js"> </script>
