@@ -3,6 +3,8 @@
 	<head>
 	  <meta charset="utf-8"/>
 	  <title>TP noté </title>
+	  
+	  
 	  <style>
 	  h2 {
 	  color :blue; 
@@ -28,30 +30,50 @@
 	  }
 	  </style>
 	  </head>
-	<script> 
-	  function showCity() { alert(villeCourante); }
-	  let villeCourante = "Lyon";
+	  
+	  <script> 
+	  function showCity(){
+				//console.log(villeCourante);
+				//let villeCourante = "LYON";
+				let NomVilleSelectionne= document.getElementsByID("ville-select").value;
+				let cities = document.getElementsByClassName("city");
+				let l=cities.length;
+				for (let i=0; i<l; i++) {
+               if (cities[i].id == ville-select) {
+               ELEMENT.style.display= "none";} 
+			   else {
+      ELEMENT.style.display= "";
+			}
+			}
+			}
 	  </script>
-	<body onload="showCity()">
-	<h1><center> <strong> TP Météo HTML </strong> </center> </h1>
+	<body>
+	<h1> <center> <strong> TP Météo HTML </strong> </center> </h1>
+	<label for="ville-select"> Choose city:</label>
+	<select onchange=showCity() name="Ville" id="ville-select">
+	  <option value=""> Please choose a city </option>
+	  <option value="Lyon">Lyon</option>
+	  <option value="Grenoble">Grenoble</option>
+	  <option value="Paris">Paris</option>
+	  </select>
 	<div class="Ville">
-	<div>
-	  <h2 id="Lyon"> Lyon</h2>
+	<div id="Lyon" class="city">
+	<h2> Lyon</h2>
         <p> 5°, Nuageux
 		<img src="noun_cloud.png" 
 		alt="" width="100" /> </p>
 	</div>
-	<div>
-	<h2 id="Grenoble"> Grenoble</h2>
+	<div id="Grenoble" class="city" >
+	<h2> Grenoble</h2>
         <p> 1°,Pluvieux <img src="noun_pluie.png"
 		alt="" width="100" /> </p>
-     </div>
-	 <div> 
-	 <h2 id="Paris"> Paris </h2>
+	 </div>
+	 <div id="Paris" class="city" > 
+	 <h2> Paris </h2>
         <p> -1°,Ensoleillé <img src="noun_sun cloud.png"
 		alt="" width="100" /> </p>
-		</div>
-		</div>
+		</div>		
+		</div> 
 <footer>
       <h3>Heger AZOUZI & Mustapha MOUHOUBI</h3>
       <h3>
