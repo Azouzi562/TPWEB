@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tp html</title>
-	
 	<style>
 	
 	h1{
@@ -45,11 +44,11 @@
 			font-size: 10px;
             font-weight:  10;
             background-color: gray; 
-			color: #000;
-			margin: 5%;
-			height: 33px;
-			width: 85%;
-			transition: 1s;
+			color: white;
+			margin: 4%;
+			height: 80px;
+			width: 100%;
+			
         }
 
 		.METEO{
@@ -67,23 +66,16 @@
 			width: 90000px;
 			color: white;
             border: solid 1px #000 ;
-            background-color: rgb(145,145,145);
+            background-color: rgb(180,180,180);
             margin: 40px;
 
         }
 		</style>
+	 
+	
+		
 
 </head>
-
-<body onload="showcity()">
-	 <h1><center>TP METEO HTML </center></h1>
-	 <label for="ville-select"><strong>choisir une ville S'il vous plait</strong></label>
-<select  name="ville" id="titi" onchange=showcity()>
-<option id="">---svp choisir une option---</option>
-<option id="LYON">LYON</option>
-<option id="Grenoble">Grenoble</option>
-<option id="PARIS">PARIS</option>
-</select>
 <script>
 function showcity(){
 
@@ -103,36 +95,39 @@ let nomVilleSelectionnee=document.getElementById("titi").value;
   
   
 </script>
-
-
-
-
+<body onload="showcity()">
+	 <h1><center>TP METEO HTML </center></h1>
+	 <label for="ville-select"><strong>please choose city </strong></label>
+<select  name="ville" id="titi" onchange=showcity()>
+<option id="">---please choose an option---</option>
+<option id="LYON">LYON</option>
+<option id="Grenoble">Grenoble</option>
+<option id="PARIS">PARIS</option>
+</select>
 
 	<div class="METEO">
 
     <div id ="LYON" class="city">
     <h2 id="heg">LYON</h2>
-    <p> 5°, pluvieux</p>
+    <p> -2°, pluvieux</p>
 	<img src="noun_pluie.png" alt="photo meteo"  width="100">
     </div>
 	
     <div id="Grenoble" class="city">
 	<h2 id ="heg">Grenoble</h2>
-    <p> -1°, ensoleille</p>
+    <p> 3°, ensoleille</p>
 	<img src="noun_sun cloud.png" alt ="meteo"  width="100">
     </div>
 	
     <div id="PARIS" class="city">
     <h2 id ="heg">PARIS</h2>
-    <p> 7°, nuageux</p>
+    <p> 6°, nuageux</p>
 	<img src="noun_cloud.png" alt="photo meteo" width="100">
 	</div>
 	
 	</div>
 
 <footer>
-    <p id = "AUTEUR">Réalisé par:<strong>Heger AZOUZI/ Mustapha MOUHOUBI </strong> <br>Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.  </p>
+    <p id = "AUTEUR">Réalisé par:<strong>Heger AZOUZI/ Mustapha MOUHOUBI </strong> <br>
+	Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.  </p>
     </footer>
-
-</body>
-</html>
