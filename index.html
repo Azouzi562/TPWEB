@@ -1,65 +1,138 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <meta charset="utf-8"/>
-	  <title>TP noté </title>
-	  
-	 </head>
-	 <script> 
-	  function showCity(){
-				//console.log(villeCourante);
-				//let villeCourante = "LYON";
-				let NomVilleSelectionne= document.getElementsByID("villeselect").value;
-				let cities = document.getElementsByClassName("city");
-				let l=cities.length;
-				for (let i=0; i<l; i++) {
-               cities[i].style.display= "none"
-       if(cities[i].id==nomVilleSelectionnee){
-       cities[i].style.display= "block";
-      }
-     else{
-     cities[i].style.display= " ";
-    }
-    }
-    }
-	  </script>
+<head>
+	<meta charset="utf-8">
+	<title>Tp html</title>
+	
+	<style>
+	
+	h1{
+	font-style:  italic;
+	background-color: blue;
+	color: white;
+	margin: 15px;
+	width: 95%;
+	transition: 1s;
+}
 	 
-	 
-	 <body>
-	<h1> <center> <strong> TP Météo HTML </strong> </center> </h1>
-	<label for="ville-select"> Choose city:</label>
-	<select onchange=showCity() name="Ville" id="villeselect">
-	  <option value=""> Please choose a city </option>
-	  <option value="Lyon">Lyon</option>
-	  <option value="Grenoble">Grenoble</option>
-	  <option value="Paris">Paris</option>
-	  </select>
-	<div class="Ville">
-	<div id="Lyon" class="city">
-	<h2> Lyon</h2>
-        <p> 5°, Nuageux
-		<img src="noun_cloud.png" 
-		alt="" width="100" /> </p>
+        h2 {
+            color: blue;
+            font-size: 20px;
+        }  
+        
+        #heg{
+        	color: blue;
+            
+        }
+		#heg{
+			color: blue;
+            
+        }
+
+		#heg{
+            
+            color: blue;
+            font-weight:  bolder;
+        }
+        
+        p {
+            color: rgb(0, 0, 0);
+            font-weight:  bold;
+        }
+
+		#AUTEUR {
+			padding: 20px;
+			font-size: 10px;
+            font-weight:  10;
+            background-color: gray; 
+			color: #000;
+			margin: 5%;
+			height: 33px;
+			width: 85%;
+			transition: 1s;
+        }
+
+		.METEO{
+            display: flex;
+			flex-warp: warp;
+			margin: 5px;
+			width: 100%;
+			transition: 1s;
+			flex-direction: row;
+			box-sizing: border-box;
+		    height: 25%;
+        }
+
+		.METEO div {
+			width: 90000px;
+			color: white;
+            border: solid 1px #000 ;
+            background-color: rgb(145,145,145);
+            margin: 40px;
+
+        }
+		</style>
+
+</head>
+
+<body onload="showcity()">
+	 <h1><center>TP METEO HTML </center></h1>
+	 <label for="ville-select"><strong>choisir une ville S'il vous plait</strong></label>
+<select  name="ville" id="titi" onchange=showcity()>
+<option id="">---svp choisir une option---</option>
+<option id="LYON">LYON</option>
+<option id="Grenoble">Grenoble</option>
+<option id="PARIS">PARIS</option>
+</select>
+<script>
+function showcity(){
+
+let nomVilleSelectionnee=document.getElementById("titi").value;
+  let cities = document.getElementsByClassName("city");
+  let l= cities.length;
+  for(let i=0; i<l; i++){
+  cities[i].style.display= "none"
+  if(cities[i].id==nomVilleSelectionnee){
+  cities[i].style.display= "block";
+  }
+  else{
+  cities[i].style.display= " ";
+  }
+  }
+  }
+  
+  
+</script>
+
+
+
+
+
+	<div class="METEO">
+
+    <div id ="LYON" class="city">
+    <h2 id="heg">LYON</h2>
+    <p> 5°, pluvieux</p>
+	<img src="noun_pluie.png" alt="photo meteo"  width="100">
+    </div>
+	
+    <div id="Grenoble" class="city">
+	<h2 id ="heg">Grenoble</h2>
+    <p> -1°, ensoleille</p>
+	<img src="noun_sun cloud.png" alt ="meteo"  width="100">
+    </div>
+	
+    <div id="PARIS" class="city">
+    <h2 id ="heg">PARIS</h2>
+    <p> 7°, nuageux</p>
+	<img src="noun_cloud.png" alt="photo meteo" width="100">
 	</div>
-	<div id="Grenoble" class="city" >
-	<h2> Grenoble</h2>
-        <p> 1°,Pluvieux <img src="noun_pluie.png"
-		alt="" width="100" /> </p>
-	 </div>
-	 <div id="Paris" class="city" > 
-	 <h2> Paris </h2>
-        <p> -1°,Ensoleillé <img src="noun_sun cloud.png"
-		alt="" width="100" /> </p>
-		</div>		
-		</div> 
+	
+	</div>
+
 <footer>
-      <h3>Heger AZOUZI & Mustapha MOUHOUBI</h3>
-      <h3>
-        Icones météo par
-        <a target="blank" href="https://thenounproject.com/#_="
-          >thenounproject</a
-        >
-      </h3>
+    <p id = "AUTEUR">Réalisé par:<strong>Heger AZOUZI/ Mustapha MOUHOUBI </strong> <br>Icones meteo par <a href="https://thenounproject.com/search/collection/?q=weather">Nook Fulloption</a>.  </p>
     </footer>
-	</body>
+
+</body>
 </html>
